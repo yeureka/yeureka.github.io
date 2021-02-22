@@ -1,0 +1,244 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HTML 超文本（一） | Yeureka</title><meta name="keywords" content="HTML"><meta name="author" content="Yeureka"><meta name="copyright" content="Yeureka"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="HTML 超文本（一）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML 超文本（一）">
+<meta property="og:url" content="http://example.com/2017/08/16/HTML%20%E8%B6%85%E6%96%87%E6%9C%AC%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+<meta property="og:site_name" content="Yeureka">
+<meta property="og:description" content="HTML 超文本（一）">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2017-08-16T12:12:00.000Z">
+<meta property="article:modified_time" content="2017-08-17T14:01:11.000Z">
+<meta property="article:author" content="Yeureka">
+<meta property="article:tag" content="HTML">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2017/08/16/HTML%20%E8%B6%85%E6%96%87%E6%9C%AC%EF%BC%88%E4%B8%80%EF%BC%89/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2017-08-17 22:01:11'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">124</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Yeureka</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">HTML 超文本（一）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2017-08-16T12:12:00.000Z" title="发表于 2017-08-16 20:12:00">2017-08-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2017-08-17T14:01:11.000Z" title="更新于 2017-08-17 22:01:11">2017-08-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/HTML%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%88%E5%AE%9E%E9%AA%8C%E6%A5%BC%EF%BC%89/">HTML基础入门（实验楼）</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>HTML 超文本（一）</p>
+<span id="more"></span>
+
+<p>写在前面：因为这节要方便实现图片的调用，从这一章我们就可以使用环境中的开发软件Brackets（方便补全和查看），但是没有google chrome，不能实时预览，但至少，还有补全。</p>
+<p>打开开发环境以后我们在桌面新建一个文件夹，以后我们工程的所有要用的东西就放在里面，方便调用。</p>
+<h3 id="HTML链接"><a href="#HTML链接" class="headerlink" title="HTML链接"></a>HTML链接</h3><p>之所以你可以在浏览器屏幕上单击鼠标或在键盘上按下按键，从而选择并自动跳转到文档中自己感兴趣的那个主题，或跳转到世界上某处完全不同的集合中的某个文档。那是因为你点击的这就是超链接</p>
+<p>相信大家对超链接不会陌生吧，天天都不知道点了多少个呢。超链接可以是一个字，一个词，或者一组词，也可以是一幅图像，你可以点击这些内容来跳转到新的文档或者当前文档中的某个部分。我们在前面的例子中只简单使用了&lt; a&gt;标签 ，用字符作为网业的超链接，还使用&lt; a&gt;实现了发送邮件的功能。下面我们要讲到的都是关于&lt; a&gt;标签的属性</p>
+<p>我们这就详细来讲解HTML链接：</p>
+<h4 id="给文字及图片添加超链接"><a href="#给文字及图片添加超链接" class="headerlink" title="给文字及图片添加超链接"></a>给文字及图片添加超链接</h4><p>首先我们还是回顾一下最简单的链接使用，直接给文字添加链接到网页和另外的HTML文件。</p>
+<p>HTML内容如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt; html&gt;</span><br><span class="line">&lt; body&gt;</span><br><span class="line"></span><br><span class="line">    &lt; p&gt;let&#39;s have an example&lt; &#x2F;p&gt;</span><br><span class="line"></span><br><span class="line">    &lt; p&gt;   </span><br><span class="line">        &lt; a href&#x3D;&quot;http:&#x2F;&#x2F;www.shiyanlou.com&quot;&gt;shiyanlou&lt; &#x2F;a&gt;</span><br><span class="line">    &lt; &#x2F;p&gt;</span><br><span class="line"></span><br><span class="line">&lt; &#x2F;body&gt;</span><br><span class="line">&lt; &#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<p>这是自己在环境中的截图：</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/userid20407labid119time1423297874394"></p>
+<p>这是最简单的超链接,接下来我们就来让这个HTML文件链接到另一个HTML文件。（在相同的文件夹，再添加一个HTML文件），然后下面是HTML内容和结果</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/userid20407labid119time1423298769922"></p>
+<p>点击进去以后（另一个HTML的内容就不再展示）：</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/userid20407labid119time1423298798069"></p>
+<p>说完了给文字添加超链接，下面我们就来说说给给图片添加超链接，点击图片，链接到另一个页面</p>
+<p>这是内容与结果截图：</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/userid20407labid120time1423450150809"></p>
+<p>点击图片以后成功链接：</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/userid20407labid120time1423450217924"></p>
+<h4 id="超链接的打开方式"><a href="#超链接的打开方式" class="headerlink" title="超链接的打开方式"></a>超链接的打开方式</h4><p>打开方式分为在本页打开和在新的浏览器窗口打开，默认情况下，超级链接打开新页面的方式是自我覆盖（就是在本页打开）。根据浏览者的不同需要，读者可以指定超级链接的其他打开新窗口的方式。超级链接标签提供了target属性进行设置，取值分别为_self（自我覆盖，默认）、_blank（创建新窗口打开新页面）。下面我们就来动手区分下这两个属性的区别（由于我们已经写过默认的情况，这里我们就只添加_blank属性）</p>
+<p>在前面的基础上我们在&lt; a&gt;标签加入target属性：target=”_blank”</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/userid20407labid119time1423447370274"></p>
+<p>通过与第一张图的对比我们可以看出，_blank属性加上以后，链接到的网页是在新窗口中打开的，而默认的_self属性则是在本页面以覆盖的形式打开（第一张图）</p>
+<h4 id="超链接添加提示文字"><a href="#超链接添加提示文字" class="headerlink" title="超链接添加提示文字"></a>超链接添加提示文字</h4><p>有些时候超链接文字不足以说明点击以后所要链接的内容，所以这个时候我们就需要给超链接添加提示文字，加以描述下一个链接的内容，当光标停留在超链接上时，提示语言就会显现，会让页面显现的很简介。设计到的属性就是title，下面我们再来动手实验一把</p>
+<p>下面就是实验内容和效果</p>
+<p>在前面的基础上，&lt; a&gt;标签加上title属性：title=”this word will link to the web of shiyanlou”</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/userid20407labid119time1423447370274"></p>
+<h4 id="超链接实现书签"><a href="#超链接实现书签" class="headerlink" title="超链接实现书签"></a>超链接实现书签</h4><p>也许你在网页看过小说，当你在页首点击章节的题目，就会自动的跳转到相应的章节，这是怎样实现的呢？。要实现书签，你就要了解，什么是锚（anchor）。锚（anchor）是引自于船只上的锚，锚被抛下后，船只就不容易飘走、迷路。实际上锚就是用于在单个页面内不同位置的跳转，有的地方叫做书签。涉及到的标签当然还是&lt; a&gt;标签,超级链接标签的name属性用于定义锚的名称，一个页面可以定义多个锚，通过超级链接的href属性可以根据name跳转到对应的锚。</p>
+<p>如下实现跳转：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href&#x3D;&quot;#跳转目的地名称&quot;&gt;跳转起始字符&lt;&#x2F;a&gt;</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">&lt;a name&#x3D;&quot;跳转目的地名称&quot;&gt;跳转目的地字符&lt;&#x2F;a&gt;</span><br></pre></td></tr></table></figure>
+<p>下面我们就来具体的实现下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">    &lt;title&gt;HTML&lt;&#x2F;title&gt;  </span><br><span class="line">    &lt;&#x2F;head&gt;  </span><br><span class="line">&lt;body style&#x3D;&quot;font-size:20px&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;p style&#x3D;&quot;text-align:center&quot;&gt;HTML LEARNING&lt;&#x2F;p&gt;</span><br><span class="line"></span><br><span class="line">    &lt;p&gt;</span><br><span class="line">    &lt;a href&#x3D;&quot;#c1&quot;&gt;  HTML chushi&lt;&#x2F;a&gt;</span><br><span class="line">    &lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;</span><br><span class="line">    &lt;a href&#x3D;&quot;#c2&quot;&gt;HTML wenben &lt;&#x2F;a&gt;</span><br><span class="line">    &lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;</span><br><span class="line">    &lt;a href&#x3D;&quot;#c3&quot;&gt;HTML chaowenben 1 &lt;&#x2F;a&gt;</span><br><span class="line">    &lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;</span><br><span class="line">    &lt;a href&#x3D;&quot;#c4&quot;&gt; HTML chaowenben 2 &lt;&#x2F;a&gt;</span><br><span class="line">    &lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;</span><br><span class="line">    &lt;a href&#x3D;&quot;#c5&quot;&gt;HTML shiyan &lt;&#x2F;a&gt;</span><br><span class="line">    &lt;&#x2F;p&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;h1&gt;&lt;a name&#x3D;&quot;c1&quot;&gt;&lt;&#x2F;a&gt;chapter 1 chushi HTML&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;p&gt;lalalaalalal&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;lalalaalalal&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;lalalaalalal&lt;&#x2F;p&gt;</span><br><span class="line"></span><br><span class="line">    &lt;h1&gt;&lt;a name&#x3D;&quot;c2&quot;&gt;&lt;&#x2F;a&gt;chapter 2 wenben HTML&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;p&gt;lalalaalalal&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;lalalaalalal&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;lalalaalalal&lt;&#x2F;p&gt;</span><br><span class="line"></span><br><span class="line">    &lt;h1&gt;&lt;a name&#x3D;&quot;c3&quot;&gt;&lt;&#x2F;a&gt;chapter 3 chaowenben 1 HTML&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;p&gt;lalalaalalal&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;lalalaalalal&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;lalalaalalal&lt;&#x2F;p&gt;</span><br><span class="line"></span><br><span class="line">    &lt;h1&gt;&lt;a name&#x3D;&quot;c4&quot;&gt;&lt;&#x2F;a&gt;chapter 4 chaowenben 2 HTML&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;p&gt;lalalaalalal&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;lalalaalalal&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;lalalaalalal&lt;&#x2F;p&gt;</span><br><span class="line"></span><br><span class="line">    &lt;h1&gt;&lt;a name&#x3D;&quot;c5&quot;&gt;&lt;&#x2F;a&gt;chapter 5 shiyan HTML&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;p&gt;lalalaalalal&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;lalalaalalal&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;lalalaalalal&lt;&#x2F;p&gt;</span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://dn-anything-about-doc.qbox.me/userid20407labid119time1423459809914"></p>
+<p>点击实现跳转</p>
+<h3 id="HTML表格"><a href="#HTML表格" class="headerlink" title="HTML表格"></a>HTML表格</h3><p>HTML 網頁設計不可或缺的元素就是表格（Table），通常表格用來做版面的排版，而表格的用法包含了幾個重要的标签，分別是 table、tr 與 td 這幾個重點，組合起來才是個完整的表格，表格由 &lt; table&gt; 标签来定义。每个表格均有若干行（由 &lt; tr&gt; 标签定义），每行被分割为若干单元格（由 &lt; td&gt; 标签定义）。字母 td 指表格数据（table data），即数据单元格的内容。&lt; th&gt;标签用来定义表头。数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。</p>
+<p>下面我们动手来写一个简单HTML文件来练习这几个标签：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;title &gt;TABLE&lt;&#x2F;title&gt;</span><br><span class="line">&lt;body style&#x3D;&quot;font-size:20px&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;p style&#x3D;&quot;text-align:center&quot;&gt;table practice&lt;&#x2F;p&gt;  </span><br><span class="line"></span><br><span class="line">     &lt;table  align&#x3D;&quot;center&quot; border&#x3D;&quot;1&quot;&gt;  </span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">            &lt;td&gt;first row and first column&lt;&#x2F;td&gt;</span><br><span class="line">            &lt;td&gt;first row and second column&lt;&#x2F;td&gt;</span><br><span class="line">            &lt;td&gt;first row and third column&lt;&#x2F;td&gt;</span><br><span class="line">            &lt;&#x2F;tr&gt;</span><br><span class="line"></span><br><span class="line">             &lt;tr&gt;</span><br><span class="line">             &lt;td&gt;second row and first column&lt;&#x2F;td&gt;</span><br><span class="line">             &lt;td&gt;second row and second column&lt;&#x2F;td&gt;</span><br><span class="line">             &lt;td&gt;second row and third column&lt;&#x2F;td&gt;</span><br><span class="line">             &lt;&#x2F;tr&gt;</span><br><span class="line"></span><br><span class="line">     &lt;&#x2F;table&gt;   </span><br><span class="line"></span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<p>这是实验截图：</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/userid20407labid119time1423464099717"></p>
+<p>border=”1”定义的是最外面边框粗细，为1，你也可以设置为0，就是不显示边框（默认就是没有边框）这里我们将其改成15试试：<br><img src="https://dn-anything-about-doc.qbox.me/userid20407labid119time1423464566699"></p>
+<p>下面我们再介绍表格两个属性：</p>
+<p>colspan：控制此单位所占列数</p>
+<p>rowspan：控制此单位所占行数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;title &gt;TABLE&lt;&#x2F;title&gt;</span><br><span class="line">&lt;body style&#x3D;&quot;font-size:30px&quot;&gt;</span><br><span class="line">    &lt;p style&#x3D;&quot;text-align:center&quot;&gt;table practice&lt;&#x2F;p&gt;</span><br><span class="line">     &lt;table  align&#x3D;&quot;center&quot; border&#x3D;&quot;15&quot; &gt;</span><br><span class="line"></span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">         &lt;td align&#x3D;&quot;center&quot; colspan&#x3D;&quot;2&quot;&gt;first row and first column&lt;&#x2F;td&gt;</span><br><span class="line">         &lt;&#x2F;tr&gt;</span><br><span class="line"></span><br><span class="line">         &lt;tr&gt;</span><br><span class="line">         &lt;td rowspan&#x3D;&quot;2&quot;&gt;second row and first column &lt;&#x2F;td&gt;</span><br><span class="line">            &lt;td&gt;second row and second column &lt;&#x2F;td&gt;</span><br><span class="line">            &lt;td &gt;second row and third column&lt;&#x2F;td&gt;</span><br><span class="line">         &lt;&#x2F;tr&gt;</span><br><span class="line">         &lt;tr&gt;</span><br><span class="line">         &lt;td&gt;third row and first column &lt;&#x2F;td&gt;</span><br><span class="line">            &lt;td&gt;third row and second column &lt;&#x2F;td&gt;</span><br><span class="line">         &lt;&#x2F;tr&gt;</span><br><span class="line">        &lt;&#x2F;table&gt;   </span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<p>如果不是很理解，我们就来看看在网页上的表现，对比起来有助于我们理解。</p>
+<p>让第一列第一行这个单位占两列，让第二行第一列这个单位占两行，就是这个效果。</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/userid20407labid119time1423466365267"></p>
+<p>表格还有很多细节可以定义,我们早这里就简单叙述，大家需要动手练习：</p>
+<ul>
+<li><p>标签：&lt; th&gt;表头&lt; /th&gt;：设置表头</p>
+</li>
+<li><p>标签：&lt; caption&gt;标题&lt; /caption&gt;：设置表的标题</p>
+</li>
+<li><p>属性：cellpadding=”…”设置单元格边距</p>
+</li>
+<li><p>属性：bgcolor=”…”设置表格背景颜色</p>
+</li>
+<li><p>属性：background=”…” 以某张图片作为表格背景</p>
+</li>
+</ul>
+<h3 id="HTML图像"><a href="#HTML图像" class="headerlink" title="HTML图像"></a>HTML图像</h3><p>上面我们简单提到过用图像作为链接使用，接下来我们来详细讲述下图像的应用。</p>
+<p>一般我们用到的就是插入图片，将图片多为背景，再者将图片作为链接。涉及到的标签就是&lt; img&gt;&lt; /img&gt;</p>
+<p>接下来我们就动手开始写一个HTML文件加深了解</p>
+<p>首先我们用浏览器在网页上下载几张图片（放到和HTML文件一个文件夹中）供后面使用。</p>
+<p>1.先设置一张图片为网页背景图片</p>
+<p>在body 属性中加入background属性添加背景图片</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/userid20407labid119time1423473894835"></p>
+<p>2.举例插入一张图片</p>
+<p>写法如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src&#x3D;&quot;路径加文件名&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>擦入图片以后：</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/userid20407labid119time1423474731446"></p>
+<p>这时我们可以看出，字体和图片的低端是对其的，下面我们就来调整下对其方式</p>
+<p>3.添加属性调整图片的对其方式</p>
+<p>在&lt; img&gt;标签中加入align属性，调整对其。</p>
+<p>相对习题的上下可以加的参数有 bottom、middle、top，默认就是我们刚看见的bottom</p>
+<p>相对字体左右可加的参数有right，left默认为right</p>
+<p>下面我们直接来比较下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;image test&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;&#x2F;head&gt;</span><br><span class="line">    &lt;body background&#x3D;&quot;.&#x2F;qwe.gif&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;p&gt;let&#39;s have an example&lt;img src&#x3D;&quot;.&#x2F;julizi.png&quot;&gt;&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt; align top&lt;img src&#x3D;&quot;.&#x2F;julizi.png&quot; align&#x3D;&quot;top&quot; &gt;&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;align middle&lt;img src&#x3D;&quot;.&#x2F;julizi.png&quot; align&#x3D;&quot;middle&quot;&gt;&lt;&#x2F;p&gt;</span><br><span class="line">    &lt;p&gt;align left&lt;img src&#x3D;&quot;.&#x2F;julizi.png&quot; align&#x3D;&quot;left&quot; &gt;&lt;&#x2F;p&gt;</span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://dn-anything-about-doc.qbox.me/userid20407labid119time1423476154907"></p>
+<p>4.调整插入图片尺寸</p>
+<p>大多数的尺寸都没有那么合适，直接插入以后会破换整体页面的效果。所以在插入图片时，很有必要控制其尺寸，这是很容易办到的，就还需要在&lt; img&gt;标签中加入width height 两个属性。</p>
+<p>那我们顺势就控制下上面的那几副图吧</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">width&#x3D;&quot;80&quot; height&#x3D;&quot;80&quot;</span><br></pre></td></tr></table></figure>
+<p><img src="https://dn-anything-about-doc.qbox.me/userid20407labid119time1423477212662"></p>
+<p>（当然，我还调整了字体大小）</p>
+<p>5.创建图像映射</p>
+<p>在这之前我们动手试验过将图片作为链接来使用，触发链接的方式就是点击图片的任何地方都可以链接到跳转地址，有时我们需要实现，点击图片的不同地方跳转到不同的地方。意思就是，一张图片我们可以创建带有可供点击区域的图像地图，其中每个区域就是一个超链接。涉及到的标签就是&lt; map&gt;标签，用来指定图片,&lt; area&gt;用来指定超链接区域</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src&#x3D;&quot;xx.jpg&quot; usemap&#x3D;&quot;#mp&quot;&#x2F;&gt;  </span><br><span class="line">&lt;map name&#x3D;&quot;mp&quot; id&#x3D;&quot;mp&quot;&gt;  </span><br><span class="line">    &lt;area&gt;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">    &lt;&#x2F;area&gt;  </span><br><span class="line">&lt;&#x2F;map&gt;</span><br></pre></td></tr></table></figure>
+<p>这里以一张图片作为地图，</p>
+<p>在&lt; area&gt;标签中我们会涉及到shape ，coords， href属性，分别用来指定超链接区域形状，超链接区域坐标，还有超链接跳转地。</p>
+<p>这是具体实现内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;image test&lt;&#x2F;title&gt;</span><br><span class="line">    &lt;&#x2F;head&gt;</span><br><span class="line">    &lt;body background&#x3D;&quot;.&#x2F;qwe.gif&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;p&gt;tap the li zi &lt;&#x2F;p&gt;</span><br><span class="line">    &lt;img src&#x3D;&quot;.&#x2F;julizi.png&quot; usemap&#x3D;&quot;#lizi&quot;&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;map name&#x3D;&quot;lizi&quot;&gt;</span><br><span class="line">     &lt;area shape&#x3D;&quot;rect&quot; coords&#x3D;&quot;50,10,100,60&quot; href&#x3D;&quot;img.html&quot; target&#x3D;&quot;_blank&quot;</span><br><span class="line">    &lt;&#x2F;map&gt;  </span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<p>然后，当我们点击小松鼠举起的栗子，你就会看见更多栗子</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/userid20407labid120time1423539023047"></p>
+<p>shape属性的取值可以是：rect(矩形)、circle(圆形)、poly(多边形)和default(整个图像区域)。这里采用的是矩形。</p>
+<p>coords属性对于矩形而言，coords有4个值，分别用逗号隔开，表示矩形区域左上角x坐标、左上角y坐标、右下角x坐标和右下角y坐标，这里获取坐标的方式，就用截图工具帮忙就好。</p>
+<p>具体的代码与图片大家可以使用命令克隆一个到桌面上以验证</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo git clone https:&#x2F;&#x2F;github.com&#x2F;shiyanlou&#x2F;HTML1</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Yeureka</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2017/08/16/HTML%20%E8%B6%85%E6%96%87%E6%9C%AC%EF%BC%88%E4%B8%80%EF%BC%89/">http://example.com/2017/08/16/HTML 超文本（一）/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Yeureka</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/HTML/">HTML</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2017/08/16/HTML%20%E8%B6%85%E6%96%87%E6%9C%AC%EF%BC%88%E4%BA%8C%EF%BC%89/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">HTML 超文本（二）</div></div></a></div><div class="next-post pull-right"><a href="/2017/08/16/PAT(Basic%20Level)%201008%20%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E5%BE%AA%E7%8E%AF%E5%8F%B3%E7%A7%BB%E9%97%AE%E9%A2%98%20(20)/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">PAT(Basic Level) 1008 数组元素循环右移问题 (20)</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2017/08/05/HTML 初识 HTML/" title="HTML 初识 HTML"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-08-05</div><div class="title">HTML 初识 HTML</div></div></a></div><div><a href="/2017/08/16/HTML 基础汇总实验/" title="HTML 基础汇总实验"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-08-16</div><div class="title">HTML 基础汇总实验</div></div></a></div><div><a href="/2017/08/17/HTML 文本/" title="HTML 文本"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-08-17</div><div class="title">HTML 文本</div></div></a></div><div><a href="/2017/08/16/HTML 超文本（二）/" title="HTML 超文本（二）"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-08-16</div><div class="title">HTML 超文本（二）</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Yeureka</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">124</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/yeureka"><i class="fab fa-github"></i><span>关注我</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%E9%93%BE%E6%8E%A5"><span class="toc-number">1.</span> <span class="toc-text">HTML链接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%99%E6%96%87%E5%AD%97%E5%8F%8A%E5%9B%BE%E7%89%87%E6%B7%BB%E5%8A%A0%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-number">1.1.</span> <span class="toc-text">给文字及图片添加超链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5%E7%9A%84%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">超链接的打开方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5%E6%B7%BB%E5%8A%A0%E6%8F%90%E7%A4%BA%E6%96%87%E5%AD%97"><span class="toc-number">1.3.</span> <span class="toc-text">超链接添加提示文字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5%E5%AE%9E%E7%8E%B0%E4%B9%A6%E7%AD%BE"><span class="toc-number">1.4.</span> <span class="toc-text">超链接实现书签</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%E8%A1%A8%E6%A0%BC"><span class="toc-number">2.</span> <span class="toc-text">HTML表格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%E5%9B%BE%E5%83%8F"><span class="toc-number">3.</span> <span class="toc-text">HTML图像</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/02/22/Blog-%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%BC%82%E6%AD%A5%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B%EF%BC%882%EF%BC%89/" title="Python进程+协程——从零开始搭建异步爬虫（2）"><img src="https://docpicture-1252757442.cos.ap-shanghai.myqcloud.com/picgo/20210222003822Blog-异步爬虫框架实现架构图.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python进程+协程——从零开始搭建异步爬虫（2）"/></a><div class="content"><a class="title" href="/2021/02/22/Blog-%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%BC%82%E6%AD%A5%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B%EF%BC%882%EF%BC%89/" title="Python进程+协程——从零开始搭建异步爬虫（2）">Python进程+协程——从零开始搭建异步爬虫（2）</a><time datetime="2021-02-21T17:30:00.000Z" title="发表于 2021-02-22 01:30:00">2021-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/22/Blog-%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%BC%82%E6%AD%A5%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B%EF%BC%881%EF%BC%89/" title="Python进程+协程——从零开始搭建异步爬虫（1）"><img src="https://docpicture-1252757442.cos.ap-shanghai.myqcloud.com/picgo/20210219215731Blog.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python进程+协程——从零开始搭建异步爬虫（1）"/></a><div class="content"><a class="title" href="/2021/02/22/Blog-%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%BC%82%E6%AD%A5%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B%EF%BC%881%EF%BC%89/" title="Python进程+协程——从零开始搭建异步爬虫（1）">Python进程+协程——从零开始搭建异步爬虫（1）</a><time datetime="2021-02-21T16:30:00.000Z" title="发表于 2021-02-22 00:30:00">2021-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2018/02/04/PAT(Basic%20Level)%201017%20A%E9%99%A4%E4%BB%A5B%20(20)/" title="PAT(Basic Level) 1017 A除以B (20)"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PAT(Basic Level) 1017 A除以B (20)"/></a><div class="content"><a class="title" href="/2018/02/04/PAT(Basic%20Level)%201017%20A%E9%99%A4%E4%BB%A5B%20(20)/" title="PAT(Basic Level) 1017 A除以B (20)">PAT(Basic Level) 1017 A除以B (20)</a><time datetime="2018-02-04T12:30:00.000Z" title="发表于 2018-02-04 20:30:00">2018-02-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2018/02/04/PAT(Basic%20Level)%201016%20%E9%83%A8%E5%88%86A%20B%20(15)/" title="PAT(Basic Level) 1016 部分A+B (15)"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PAT(Basic Level) 1016 部分A+B (15)"/></a><div class="content"><a class="title" href="/2018/02/04/PAT(Basic%20Level)%201016%20%E9%83%A8%E5%88%86A%20B%20(15)/" title="PAT(Basic Level) 1016 部分A+B (15)">PAT(Basic Level) 1016 部分A+B (15)</a><time datetime="2018-02-04T12:00:00.000Z" title="发表于 2018-02-04 20:00:00">2018-02-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/11/13/PAT(Basic%20Level)%201014%20%E7%A6%8F%E5%B0%94%E6%91%A9%E6%96%AF%E7%9A%84%E7%BA%A6%E4%BC%9A%20(20)/" title="PAT(Basic Level) 1014 福尔摩斯的约会 (20)"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PAT(Basic Level) 1014 福尔摩斯的约会 (20)"/></a><div class="content"><a class="title" href="/2017/11/13/PAT(Basic%20Level)%201014%20%E7%A6%8F%E5%B0%94%E6%91%A9%E6%96%AF%E7%9A%84%E7%BA%A6%E4%BC%9A%20(20)/" title="PAT(Basic Level) 1014 福尔摩斯的约会 (20)">PAT(Basic Level) 1014 福尔摩斯的约会 (20)</a><time datetime="2017-11-12T16:46:31.000Z" title="发表于 2017-11-13 00:46:31">2017-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Yeureka</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

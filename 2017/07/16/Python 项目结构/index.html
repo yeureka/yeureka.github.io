@@ -1,0 +1,185 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Python 项目结构 | Yeureka</title><meta name="keywords" content="Python"><meta name="author" content="Yeureka"><meta name="copyright" content="Yeureka"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Python 项目结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python 项目结构">
+<meta property="og:url" content="http://example.com/2017/07/16/Python%20%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/index.html">
+<meta property="og:site_name" content="Yeureka">
+<meta property="og:description" content="Python 项目结构">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2017-07-16T12:40:00.000Z">
+<meta property="article:modified_time" content="2017-07-16T12:41:00.000Z">
+<meta property="article:author" content="Yeureka">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2017/07/16/Python%20%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2017-07-16 20:41:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">124</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Yeureka</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Python 项目结构</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2017-07-16T12:40:00.000Z" title="发表于 2017-07-16 20:40:00">2017-07-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2017-07-16T12:41:00.000Z" title="更新于 2017-07-16 20:41:00">2017-07-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Python3-%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B%EF%BC%88%E5%AE%9E%E9%AA%8C%E6%A5%BC%EF%BC%89/">Python3 简明教程（实验楼）</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>Python 项目结构</p>
+<span id="more"></span>
+
+<h3 id="实验准备"><a href="#实验准备" class="headerlink" title="实验准备"></a>实验准备</h3><p>我们的实验项目名为 factorial。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir factorial</span><br><span class="line">$ cd factorial&#x2F;</span><br></pre></td></tr></table></figure>
+<h3 id="主代码"><a href="#主代码" class="headerlink" title="主代码"></a>主代码</h3><p>我们给将要创建的 Python 模块取名为 myfact，因此我们下一步创建 myfact 目录。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir myfact</span><br><span class="line">$ cd myfact&#x2F;</span><br></pre></td></tr></table></figure>
+<p>主代码将在 fact.py 文件里面。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&quot;myfact module&quot;</span><br><span class="line"></span><br><span class="line">def factorial(num):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    返回给定数字的阶乘值</span><br><span class="line"></span><br><span class="line">    :arg num: 我们将计算其阶乘的整数值</span><br><span class="line"></span><br><span class="line">    :return: 阶乘值，若传递的参数为负数，则为 -1</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    if num &gt;&#x3D; 0:</span><br><span class="line">        if num &#x3D;&#x3D; 0:</span><br><span class="line">            return 1</span><br><span class="line">        return num * factorial(num -1)</span><br><span class="line">    else:</span><br><span class="line">        return -1</span><br><span class="line">我们还有模块的 __init__.py 文件，内容如下：</span><br><span class="line"></span><br><span class="line">from fact import factorial</span><br><span class="line">__all__ &#x3D; [factorial, ]</span><br></pre></td></tr></table></figure>
+<p>我们还在 factorial 目录下添加了一个 README.rst 文件。因此，目录结构看起来像下面这样：<br><img src="https://dn-anything-about-doc.qbox.me/document-uid212737labid2053timestamp1471429969970.png/wm"></p>
+<h3 id="MANIFEST-in"><a href="#MANIFEST-in" class="headerlink" title="MANIFEST.in"></a>MANIFEST.in</h3><p>现在我们要写一个 MANIFEST.in 文件，它用来在使用 sdist 命令的时候找出将成为项目源代码压缩包一部分的所有文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">include *.py</span><br><span class="line">include README.rst</span><br></pre></td></tr></table></figure>
+<p>如果你想要排除某些文件，你可以在这个文件中使用 exclude 语句。</p>
+<h3 id="安装-python-setuptools-包"><a href="#安装-python-setuptools-包" class="headerlink" title="安装 python-setuptools 包"></a>安装 python-setuptools 包</h3><p>我们使用 virtualenv（这里不示范步骤）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pip3 install setuptools</span><br></pre></td></tr></table></figure>
+<h3 id="setup-py"><a href="#setup-py" class="headerlink" title="setup.py"></a>setup.py</h3><p>最终我们需要写一个 setup.py，用来创建源代码压缩包或安装软件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;env python3</span><br><span class="line">&quot;&quot;&quot;Factorial project&quot;&quot;&quot;</span><br><span class="line">from setuptools import find_packages, setup</span><br><span class="line"></span><br><span class="line">setup(name &#x3D; &#39;factorial&#39;,</span><br><span class="line">    version &#x3D; &#39;0.1&#39;,</span><br><span class="line">    description &#x3D; &quot;Factorial module.&quot;,</span><br><span class="line">    long_description &#x3D; &quot;A test module for our book.&quot;,</span><br><span class="line">    platforms &#x3D; [&quot;Linux&quot;],</span><br><span class="line">    author&#x3D;&quot;ShiYanLou&quot;,</span><br><span class="line">    author_email&#x3D;&quot;support@shiyanlou.com&quot;,</span><br><span class="line">    url&#x3D;&quot;https:&#x2F;&#x2F;www.shiyanlou.com&#x2F;courses&#x2F;596&quot;,</span><br><span class="line">    license &#x3D; &quot;MIT&quot;,</span><br><span class="line">    packages&#x3D;find_packages()</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+<p>name 是项目名称，version 是发布版本，description 和 long_description 分别是项目介绍，项目长描述。platforms 是此模块的支持平台列表。find_packages() 是一个能在你源目录下找到所有模块的特殊函数，packaging docs。</p>
+<h4 id="setup-py-用例"><a href="#setup-py-用例" class="headerlink" title="setup.py 用例"></a>setup.py 用例</h4><p>要创建一个源文件发布版本，执行以下命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python3 setup.py sdist</span><br></pre></td></tr></table></figure>
+<p>执行完毕会返回类似下面的信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">running sdist</span><br><span class="line">running egg_info</span><br><span class="line">creating factorial.egg-info</span><br><span class="line">writing factorial.egg-info&#x2F;PKG-INFO</span><br><span class="line">writing top-level names to factorial.egg-info&#x2F;top_level.txt</span><br><span class="line">writing dependency_links to factorial.egg-info&#x2F;dependency_links.txt</span><br><span class="line">writing manifest file &#39;factorial.egg-info&#x2F;SOURCES.txt&#39;</span><br><span class="line">reading manifest file &#39;factorial.egg-info&#x2F;SOURCES.txt&#39;</span><br><span class="line">reading manifest template &#39;MANIFEST.in&#39;</span><br><span class="line">writing manifest file &#39;factorial.egg-info&#x2F;SOURCES.txt&#39;</span><br><span class="line">running check</span><br><span class="line">creating factorial-0.1</span><br><span class="line">creating factorial-0.1&#x2F;factorial.egg-info</span><br><span class="line">creating factorial-0.1&#x2F;myfact</span><br><span class="line">making hard links in factorial-0.1...</span><br><span class="line">hard linking MANIFEST.in -&gt; factorial-0.1</span><br><span class="line">hard linking README.rst -&gt; factorial-0.1</span><br><span class="line">hard linking setup.py -&gt; factorial-0.1</span><br><span class="line">hard linking factorial.egg-info&#x2F;PKG-INFO -&gt; factorial-0.1&#x2F;factorial.egg-info</span><br><span class="line">hard linking factorial.egg-info&#x2F;SOURCES.txt -&gt; factorial-0.1&#x2F;factorial.egg-info</span><br><span class="line">hard linking factorial.egg-info&#x2F;dependency_links.txt -&gt; factorial-0.1&#x2F;factorial.egg-info</span><br><span class="line">hard linking factorial.egg-info&#x2F;top_level.txt -&gt; factorial-0.1&#x2F;factorial.egg-info</span><br><span class="line">hard linking myfact&#x2F;__init__.py -&gt; factorial-0.1&#x2F;myfact</span><br><span class="line">hard linking myfact&#x2F;fact.py -&gt; factorial-0.1&#x2F;myfact</span><br><span class="line">Writing factorial-0.1&#x2F;setup.cfg</span><br><span class="line">creating dist</span><br><span class="line">Creating tar archive</span><br><span class="line">removing &#39;factorial-0.1&#39; (and everything under it)</span><br></pre></td></tr></table></figure>
+<p>我们能在 dist 目录下看到一个 tar 压缩包。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ls dist&#x2F;</span><br><span class="line">factorial-0.1.tar.gz</span><br></pre></td></tr></table></figure>
+<p>记住尝试安装代码时使用 virtualenv。</p>
+<p>执行下面的命令从源代码安装。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo python3 setup.py install</span><br></pre></td></tr></table></figure>
+<p>学习更多可前往 packaging.python.org。</p>
+<h3 id="Python-Package-Index-PyPI"><a href="#Python-Package-Index-PyPI" class="headerlink" title="Python Package Index (PyPI)"></a>Python Package Index (PyPI)</h3><p>你还记得我们经常使用的 pip 命令吗？有没有想过这些包是从哪里来的？答案是 PyPI。这是 Python 的软件包管理系统。</p>
+<p>为了实验，我们会使用 PyPI 的测试服务器 <a target="_blank" rel="noopener" href="https://testpypi.python.org/pypi%E3%80%82">https://testpypi.python.org/pypi。</a></p>
+<h4 id="创建账号"><a href="#创建账号" class="headerlink" title="创建账号"></a>创建账号</h4><p>首先在这个链接注册账号。你会收到带有链接的邮件，点击这个链接确认你的注册。</p>
+<p>创建 ~/.pypirc 文件，存放你的账号详细信息，其内容格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[distutils]</span><br><span class="line">index-servers &#x3D; pypi</span><br><span class="line">    testpypi</span><br><span class="line"></span><br><span class="line">[pypi]</span><br><span class="line">repository: https:&#x2F;&#x2F;upload.pypi.org&#x2F;legacy&#x2F;</span><br><span class="line">username: &lt;username&gt;</span><br><span class="line">password: &lt;password&gt;</span><br><span class="line"></span><br><span class="line">[testpypi]</span><br><span class="line">repository:https:&#x2F;&#x2F;test.pypi.org&#x2F;legacy&#x2F;</span><br><span class="line">username: &lt;username&gt;</span><br><span class="line">password: &lt;password&gt;</span><br></pre></td></tr></table></figure>
+<p>替换 <username> 和 <password> 为您新创建的帐户的详细信息。在这里，由于我们是到 testpypi的网页上去注册账号，即将相应的服务上传到 testpypi，所以在这里，你只需修改[testpypi]的用户名和密码</p>
+<p>记得在 setup.py 中更改项目的名称为其它的名字来测试下面的指令，在接下来的命令中我将项目名称修改为factorial2，为了不重复，需要自行修改至其它名称。</p>
+<h4 id="上传到-TestPyPI-服务"><a href="#上传到-TestPyPI-服务" class="headerlink" title="上传到 TestPyPI 服务"></a>上传到 TestPyPI 服务</h4><p>下一步我们会将我们的项目到 TestPyPI 服务。这通过 twine 命令完成。</p>
+<p>我们也会使用 -r 把它指向测试服务器。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pip3 install twine</span><br><span class="line">$ twine upload dist&#x2F;* -r testpypi</span><br></pre></td></tr></table></figure>
+<p>执行完毕会返回类似下面的信息,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Uploading distributions to https:&#x2F;&#x2F;test.pypi.org&#x2F;legacy&#x2F;</span><br><span class="line">Uploading factorial2-0.1.tar.gz</span><br></pre></td></tr></table></figure>
+<p>在这里你也可以使用下面的命令上传到 PyPI 服务上，但这里需要注意，在 <del>/.pypirc 里面，你需要到 <a target="_blank" rel="noopener" href="https://pypi.python.org页面,按照上面的步骤去注册一个账号,然后到/">https://pypi.python.org页面，按照上面的步骤去注册一个账号，然后到</a></del>/.pypirc 的 [pypi] 下填写相应的用户名和密码。testpypi 和 pypi 的账号密码并不通用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ twine upload dist&#x2F;* -r pypi</span><br></pre></td></tr></table></figure>
+<p>现在如果你浏览这个页面，你会发现你的项目已经准备好被别人使用了。<br><img src="https://dn-anything-about-doc.qbox.me/document-uid377240labid2053timestamp1499405944902.png/wm"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Yeureka</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2017/07/16/Python%20%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/">http://example.com/2017/07/16/Python 项目结构/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Yeureka</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Python/">Python</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2017/07/16/Python%20Flask%20%E4%BB%8B%E7%BB%8D/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Python Flask 介绍</div></div></a></div><div class="next-post pull-right"><a href="/2017/07/16/Python%20%E6%B5%8B%E8%AF%95/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Python 测试</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2017/03/25/01-复杂度1 最大子列和问题/" title="01-复杂度1 最大子列和问题"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-03-25</div><div class="title">01-复杂度1 最大子列和问题</div></div></a></div><div><a href="/2017/03/25/01-复杂度2 Maximum Subsequence Sum/" title="01-复杂度2 Maximum Subsequence Sum"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-03-25</div><div class="title">01-复杂度2 Maximum Subsequence Sum</div></div></a></div><div><a href="/2017/08/05/Django Markdown和代码高亮/" title="Django Markdown和代码高亮"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-08-05</div><div class="title">Django Markdown和代码高亮</div></div></a></div><div><a href="/2017/08/04/Django Models和Admin以及Views和URL/" title="Django Models和Admin以及Views和URL"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-08-04</div><div class="title">Django Models和Admin以及Views和URL</div></div></a></div><div><a href="/2017/07/17/Django 入门教程/" title="Django Hello World"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-07-17</div><div class="title">Django Hello World</div></div></a></div><div><a href="/2017/07/18/Django 基本命令/" title="Django 基本命令"><img class="cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-07-18</div><div class="title">Django 基本命令</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Yeureka</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">124</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/yeureka"><i class="fab fa-github"></i><span>关注我</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%87%86%E5%A4%87"><span class="toc-number">1.</span> <span class="toc-text">实验准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">主代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MANIFEST-in"><span class="toc-number">3.</span> <span class="toc-text">MANIFEST.in</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-python-setuptools-%E5%8C%85"><span class="toc-number">4.</span> <span class="toc-text">安装 python-setuptools 包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setup-py"><span class="toc-number">5.</span> <span class="toc-text">setup.py</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#setup-py-%E7%94%A8%E4%BE%8B"><span class="toc-number">5.1.</span> <span class="toc-text">setup.py 用例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-Package-Index-PyPI"><span class="toc-number">6.</span> <span class="toc-text">Python Package Index (PyPI)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%B4%A6%E5%8F%B7"><span class="toc-number">6.1.</span> <span class="toc-text">创建账号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E5%88%B0-TestPyPI-%E6%9C%8D%E5%8A%A1"><span class="toc-number">6.2.</span> <span class="toc-text">上传到 TestPyPI 服务</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/02/22/Blog-%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%BC%82%E6%AD%A5%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B%EF%BC%882%EF%BC%89/" title="Python进程+协程——从零开始搭建异步爬虫（2）"><img src="https://docpicture-1252757442.cos.ap-shanghai.myqcloud.com/picgo/20210222003822Blog-异步爬虫框架实现架构图.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python进程+协程——从零开始搭建异步爬虫（2）"/></a><div class="content"><a class="title" href="/2021/02/22/Blog-%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%BC%82%E6%AD%A5%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B%EF%BC%882%EF%BC%89/" title="Python进程+协程——从零开始搭建异步爬虫（2）">Python进程+协程——从零开始搭建异步爬虫（2）</a><time datetime="2021-02-21T17:30:00.000Z" title="发表于 2021-02-22 01:30:00">2021-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/22/Blog-%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%BC%82%E6%AD%A5%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B%EF%BC%881%EF%BC%89/" title="Python进程+协程——从零开始搭建异步爬虫（1）"><img src="https://docpicture-1252757442.cos.ap-shanghai.myqcloud.com/picgo/20210219215731Blog.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python进程+协程——从零开始搭建异步爬虫（1）"/></a><div class="content"><a class="title" href="/2021/02/22/Blog-%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%BC%82%E6%AD%A5%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B%EF%BC%881%EF%BC%89/" title="Python进程+协程——从零开始搭建异步爬虫（1）">Python进程+协程——从零开始搭建异步爬虫（1）</a><time datetime="2021-02-21T16:30:00.000Z" title="发表于 2021-02-22 00:30:00">2021-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2018/02/04/PAT(Basic%20Level)%201017%20A%E9%99%A4%E4%BB%A5B%20(20)/" title="PAT(Basic Level) 1017 A除以B (20)"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PAT(Basic Level) 1017 A除以B (20)"/></a><div class="content"><a class="title" href="/2018/02/04/PAT(Basic%20Level)%201017%20A%E9%99%A4%E4%BB%A5B%20(20)/" title="PAT(Basic Level) 1017 A除以B (20)">PAT(Basic Level) 1017 A除以B (20)</a><time datetime="2018-02-04T12:30:00.000Z" title="发表于 2018-02-04 20:30:00">2018-02-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2018/02/04/PAT(Basic%20Level)%201016%20%E9%83%A8%E5%88%86A%20B%20(15)/" title="PAT(Basic Level) 1016 部分A+B (15)"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PAT(Basic Level) 1016 部分A+B (15)"/></a><div class="content"><a class="title" href="/2018/02/04/PAT(Basic%20Level)%201016%20%E9%83%A8%E5%88%86A%20B%20(15)/" title="PAT(Basic Level) 1016 部分A+B (15)">PAT(Basic Level) 1016 部分A+B (15)</a><time datetime="2018-02-04T12:00:00.000Z" title="发表于 2018-02-04 20:00:00">2018-02-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/11/13/PAT(Basic%20Level)%201014%20%E7%A6%8F%E5%B0%94%E6%91%A9%E6%96%AF%E7%9A%84%E7%BA%A6%E4%BC%9A%20(20)/" title="PAT(Basic Level) 1014 福尔摩斯的约会 (20)"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PAT(Basic Level) 1014 福尔摩斯的约会 (20)"/></a><div class="content"><a class="title" href="/2017/11/13/PAT(Basic%20Level)%201014%20%E7%A6%8F%E5%B0%94%E6%91%A9%E6%96%AF%E7%9A%84%E7%BA%A6%E4%BC%9A%20(20)/" title="PAT(Basic Level) 1014 福尔摩斯的约会 (20)">PAT(Basic Level) 1014 福尔摩斯的约会 (20)</a><time datetime="2017-11-12T16:46:31.000Z" title="发表于 2017-11-13 00:46:31">2017-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Yeureka</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
