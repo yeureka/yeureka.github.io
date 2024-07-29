@@ -3201,9 +3201,9 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="categories/index.html"/>
-      <url>categories/index.html</url>
+      <title>about</title>
+      <link href="about/index.html"/>
+      <url>about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -3212,9 +3212,9 @@
     
     
     <entry>
-      <title>about</title>
-      <link href="about/index.html"/>
-      <url>about/index.html</url>
+      <title>分类</title>
+      <link href="categories/index.html"/>
+      <url>categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -3239,17 +3239,6 @@
       <url>tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="baidu_verify_codeva-7nIKe3mHJQ.html"/>
-      <url>baidu_verify_codeva-7nIKe3mHJQ.html</url>
-      
-        <content type="html"><![CDATA[f8f62974c75ea975c3177e56589ea866]]></content>
       
     </entry>
     
