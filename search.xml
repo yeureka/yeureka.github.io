@@ -690,6 +690,31 @@
     
     
     <entry>
+      <title>PAT(Basic Level) 1006 换个格式输出整数 (15)</title>
+      <link href="2017/08/11/PAT(Basic%20Level)%201006%20%E6%8D%A2%E4%B8%AA%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA%E6%95%B4%E6%95%B0%20(15)/"/>
+      <url>2017/08/11/PAT(Basic%20Level)%201006%20%E6%8D%A2%E4%B8%AA%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA%E6%95%B4%E6%95%B0%20(15)/</url>
+      
+        <content type="html"><![CDATA[<p>让我们用字母<code>B</code>来表示<code>“百”</code>、字母<code>S</code>表示<code>“十”</code>，用<code>“12...n”</code>来表示个位数字<code>n（&lt;10）</code>，换个格式来输出任一个不超过3位的正整数。例如<code>234</code>应该被输出为<code>BBSSS1234</code>，因为它有2个<code>“百”</code>、3个<code>“十”</code>、以及个位的4。</p><table><thead><tr><th>项目</th><th>要求</th></tr></thead><tbody><tr><td>时间限制</td><td>400 ms</td></tr><tr><td>内存限制</td><td>65536 kB</td></tr><tr><td>代码长度限制</td><td>8000 B</td></tr><tr><td>判题程序</td><td>Standard</td></tr><tr><td>作者</td><td>CHEN, Yue</td></tr></tbody></table><p>让我们用字母B来表示“百”、字母S表示“十”，用“12…n”来表示个位数字n（&lt;10），换个格式来输出任一个不超过3位的正整数。例如234应该被输出为BBSSS1234，因为它有2个“百”、3个“十”、以及个位的4。</p><h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>每个测试输入包含1个测试用例，给出正整数n（&lt;1000）。</p><h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>每个测试用例的输出占一行，用规定的格式输出n。</p><h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例"></a>输入样例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入样例1：</span><br><span class="line">234</span><br><span class="line">输出样例1：</span><br><span class="line">BBSSS1234</span><br><span class="line">输入样例2：</span><br><span class="line">23</span><br></pre></td></tr></table></figure><h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例"></a>输出样例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输出样例2：</span><br><span class="line">SS123</span><br></pre></td></tr></table></figure><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">num_str &#x3D; input()</span><br><span class="line"></span><br><span class="line">if int(num_str) &lt; 10:</span><br><span class="line">    for i in range(1, int(num_str) + 1):</span><br><span class="line">        print(i, end&#x3D;&#39;&#39;)</span><br><span class="line">elif int(num_str) &lt; 100:</span><br><span class="line">    print(&#39;S&#39; * int(num_str[0]), end&#x3D;&#39;&#39;)</span><br><span class="line">    for i in range(1, int(num_str[1]) + 1):</span><br><span class="line">        print(i, end&#x3D;&#39;&#39;)</span><br><span class="line">elif int(num_str) &lt; 1000:</span><br><span class="line">    print(&#39;B&#39; * int(num_str[0]), end&#x3D;&#39;&#39;)</span><br><span class="line">    print(&#39;S&#39; * int(num_str[1]), end&#x3D;&#39;&#39;)</span><br><span class="line">    for i in range(1, int(num_str[2]) + 1):</span><br><span class="line">        print(i, end&#x3D;&#39;&#39;)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> PAT (Basic Level) Practise </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>PAT(Basic Level) 1007 素数对猜想 (20)</title>
       <link href="2017/08/11/PAT(Basic%20Level)%201007%20%E7%B4%A0%E6%95%B0%E5%AF%B9%E7%8C%9C%E6%83%B3%20(20)/"/>
       <url>2017/08/11/PAT(Basic%20Level)%201007%20%E7%B4%A0%E6%95%B0%E5%AF%B9%E7%8C%9C%E6%83%B3%20(20)/</url>
@@ -709,31 +734,6 @@
             <tag> Python </tag>
             
             <tag> C语言 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>PAT(Basic Level) 1006 换个格式输出整数 (15)</title>
-      <link href="2017/08/11/PAT(Basic%20Level)%201006%20%E6%8D%A2%E4%B8%AA%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA%E6%95%B4%E6%95%B0%20(15)/"/>
-      <url>2017/08/11/PAT(Basic%20Level)%201006%20%E6%8D%A2%E4%B8%AA%E6%A0%BC%E5%BC%8F%E8%BE%93%E5%87%BA%E6%95%B4%E6%95%B0%20(15)/</url>
-      
-        <content type="html"><![CDATA[<p>让我们用字母<code>B</code>来表示<code>“百”</code>、字母<code>S</code>表示<code>“十”</code>，用<code>“12...n”</code>来表示个位数字<code>n（&lt;10）</code>，换个格式来输出任一个不超过3位的正整数。例如<code>234</code>应该被输出为<code>BBSSS1234</code>，因为它有2个<code>“百”</code>、3个<code>“十”</code>、以及个位的4。</p><table><thead><tr><th>项目</th><th>要求</th></tr></thead><tbody><tr><td>时间限制</td><td>400 ms</td></tr><tr><td>内存限制</td><td>65536 kB</td></tr><tr><td>代码长度限制</td><td>8000 B</td></tr><tr><td>判题程序</td><td>Standard</td></tr><tr><td>作者</td><td>CHEN, Yue</td></tr></tbody></table><p>让我们用字母B来表示“百”、字母S表示“十”，用“12…n”来表示个位数字n（&lt;10），换个格式来输出任一个不超过3位的正整数。例如234应该被输出为BBSSS1234，因为它有2个“百”、3个“十”、以及个位的4。</p><h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>每个测试输入包含1个测试用例，给出正整数n（&lt;1000）。</p><h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>每个测试用例的输出占一行，用规定的格式输出n。</p><h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例"></a>输入样例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入样例1：</span><br><span class="line">234</span><br><span class="line">输出样例1：</span><br><span class="line">BBSSS1234</span><br><span class="line">输入样例2：</span><br><span class="line">23</span><br></pre></td></tr></table></figure><h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例"></a>输出样例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输出样例2：</span><br><span class="line">SS123</span><br></pre></td></tr></table></figure><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">num_str &#x3D; input()</span><br><span class="line"></span><br><span class="line">if int(num_str) &lt; 10:</span><br><span class="line">    for i in range(1, int(num_str) + 1):</span><br><span class="line">        print(i, end&#x3D;&#39;&#39;)</span><br><span class="line">elif int(num_str) &lt; 100:</span><br><span class="line">    print(&#39;S&#39; * int(num_str[0]), end&#x3D;&#39;&#39;)</span><br><span class="line">    for i in range(1, int(num_str[1]) + 1):</span><br><span class="line">        print(i, end&#x3D;&#39;&#39;)</span><br><span class="line">elif int(num_str) &lt; 1000:</span><br><span class="line">    print(&#39;B&#39; * int(num_str[0]), end&#x3D;&#39;&#39;)</span><br><span class="line">    print(&#39;S&#39; * int(num_str[1]), end&#x3D;&#39;&#39;)</span><br><span class="line">    for i in range(1, int(num_str[2]) + 1):</span><br><span class="line">        print(i, end&#x3D;&#39;&#39;)</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> PAT (Basic Level) Practise </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Python </tag>
             
         </tags>
       
