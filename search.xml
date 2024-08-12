@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>解决每次 unraid 重启以后 immich 账户丢失问题</title>
+      <link href="2024/08/12/%E8%A7%A3%E5%86%B3%E6%AF%8F%E6%AC%A1%20unraid%20%E9%87%8D%E5%90%AF%E4%BB%A5%E5%90%8E%20immich%20%E8%B4%A6%E6%88%B7%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98/"/>
+      <url>2024/08/12/%E8%A7%A3%E5%86%B3%E6%AF%8F%E6%AC%A1%20unraid%20%E9%87%8D%E5%90%AF%E4%BB%A5%E5%90%8E%20immich%20%E8%B4%A6%E6%88%B7%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>最近购入了一台天钡 Wtr pro amd 版，安装 unraid 后部署了最新版 immich，但是发现每次重启 unraid 后 immich 的账户都会丢失。经排查发现是 env 文件中 DB_DATA_LOCATION 设置错误导致的。</p><p>错误设置为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># The location where your uploaded files are stored</span><br><span class="line">UPLOAD_LOCATION&#x3D;&#x2F;mnt&#x2F;user&#x2F;immich</span><br><span class="line"># The location where your database files are stored</span><br><span class="line">DB_DATA_LOCATION&#x3D;&#x2F;volumn1&#x2F;...</span><br></pre></td></tr></table></figure><p>正确设置为</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># The location where your uploaded files are stored</span><br><span class="line">UPLOAD_LOCATION&#x3D;&#x2F;mnt&#x2F;user&#x2F;immich</span><br><span class="line"># The location where your database files are stored</span><br><span class="line">DB_DATA_LOCATION&#x3D;&#x2F;mnt&#x2F;user&#x2F;appdata&#x2F;immich&#x2F;postgres</span><br></pre></td></tr></table></figure><p>由于 volumn1 卷为虚拟位置，postgres 可以正确启动，但是断电后数据会全部丢失，导致上传的文件还在但是包括账号、图片索引在内的数据库记录丢失，将 DB_DATA_LOCATION 设置为一个实际存在的位置即可。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> unraid </tag>
+            
+            <tag> immich </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>解决python-wordpress-xmlrpc上传文章后发布时间为8小时后</title>
       <link href="2024/07/31/%E8%A7%A3%E5%86%B3python-wordpress-xmlrpc%E4%B8%8A%E4%BC%A0%E6%96%87%E7%AB%A0%E5%90%8E%E5%8F%91%E5%B8%83%E6%97%B6%E9%97%B4%E4%B8%BA8%E5%B0%8F%E6%97%B6%E5%90%8E/"/>
       <url>2024/07/31/%E8%A7%A3%E5%86%B3python-wordpress-xmlrpc%E4%B8%8A%E4%BC%A0%E6%96%87%E7%AB%A0%E5%90%8E%E5%8F%91%E5%B8%83%E6%97%B6%E9%97%B4%E4%B8%BA8%E5%B0%8F%E6%97%B6%E5%90%8E/</url>
