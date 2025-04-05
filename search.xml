@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>打造学术外挂大脑（三）：Query语法打造智能文献检索系统</title>
+      <link href="2025/04/05/%E6%89%93%E9%80%A0%E5%AD%A6%E6%9C%AF%E5%A4%96%E6%8C%82%E5%A4%A7%E8%84%91%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AQuery%E8%AF%AD%E6%B3%95%E6%89%93%E9%80%A0%E6%99%BA%E8%83%BD%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2%E7%B3%BB%E7%BB%9F/"/>
+      <url>2025/04/05/%E6%89%93%E9%80%A0%E5%AD%A6%E6%9C%AF%E5%A4%96%E6%8C%82%E5%A4%A7%E8%84%91%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AQuery%E8%AF%AD%E6%B3%95%E6%89%93%E9%80%A0%E6%99%BA%E8%83%BD%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2%E7%B3%BB%E7%BB%9F/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://youpai.yeureka.cn/picgo/202504052302915.jpeg"></p><p>通过前两期教程，我们已经打通了Zotero文献管理与Logseq知识图谱的联动通道（点击查看往期<a href="https://blog.csdn.net/dyw39/article/details/146990310?spm=1011.2124.3001.6209">教程1</a>、<a href="https://blog.csdn.net/dyw39/article/details/147003840?spm=1011.2124.3001.6209">教程2</a>）。本文将为您解锁Logseq的Query检索功能，助您实现文献数据的精准定位与智能聚合。</p><h2 id="Query语法核心操作指南"><a href="#Query语法核心操作指南" class="headerlink" title="Query语法核心操作指南"></a>Query语法核心操作指南</h2><p>在Zotero中建立文献标签体系后（示例标签系统如图）同步至Logseq，可通过以下逻辑运算符构建检索表达式：<br><img src="https://youpai.yeureka.cn/picgo/202504052151023.png_/fw/350"></p><h3 id="逻辑与（AND）检索"><a href="#逻辑与（AND）检索" class="headerlink" title="逻辑与（AND）检索"></a>逻辑与（AND）检索</h3><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;query (<span class="name"><span class="builtin-name">and</span></span> [[A方面结论]] [[属于<span class="number">1</span>]] )&#125;&#125;</span><br></pre></td></tr></table></figure><p><strong>应用场景</strong>：查找同时包含”核心结论”与”分类属性”的文献<br><strong>检索效果</strong>：精准定位同时满足两个条件的文献条目<br><img src="https://youpai.yeureka.cn/picgo/202504052155182.png" alt="AND检索结果"></p><h3 id="逻辑或（OR）检索"><a href="#逻辑或（OR）检索" class="headerlink" title="逻辑或（OR）检索"></a>逻辑或（OR）检索</h3><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;query (<span class="name"><span class="builtin-name">or</span></span> [[属于<span class="number">1</span>]] [[属于<span class="number">2</span>]])&#125;&#125;</span><br></pre></td></tr></table></figure><p><strong>应用场景</strong>：跨分类文献普查/建立关联研究网络<br><strong>检索效果</strong>：获取满足任一条件的文献集合<br><img src="https://youpai.yeureka.cn/picgo/202504052157877.png" alt="OR检索结果"></p><h3 id="逻辑非（NOT）嵌套检索"><a href="#逻辑非（NOT）嵌套检索" class="headerlink" title="逻辑非（NOT）嵌套检索"></a>逻辑非（NOT）嵌套检索</h3><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;query (<span class="name"><span class="builtin-name">and</span></span> [[属于<span class="number">1</span>]] (<span class="name"><span class="builtin-name">not</span></span> [[A方面结论]])) &#125;&#125;</span><br></pre></td></tr></table></figure><p><strong>应用场景</strong>：排除特定条件的精准筛查<br><strong>检索效果</strong>：获取目标分类中排除特定研究方向的文献<br><img src="https://youpai.yeureka.cn/picgo/202504052158627.png" alt="NOT嵌套检索"></p><blockquote><p>提示：所有检索操作均支持全局知识库查询，可实现跨文献的智能关联</p></blockquote><h2 id="科研工作流优化技巧"><a href="#科研工作流优化技巧" class="headerlink" title="科研工作流优化技巧"></a>科研工作流优化技巧</h2><h3 id="双模式标签系统"><a href="#双模式标签系统" class="headerlink" title="双模式标签系统"></a>双模式标签系统</h3><ul><li><code>[[双链标签]]</code> 与 <code>#标签</code> 完全等效（示例对比如下图），有的同学可能更习惯使用 <code>#标签</code>。<br><img src="https://youpai.yeureka.cn/picgo/202504052208557.png_/fw/250"><br><img src="https://youpai.yeureka.cn/picgo/202504052209559.png"></li></ul><h3 id="动态标签管理"><a href="#动态标签管理" class="headerlink" title="动态标签管理"></a>动态标签管理</h3><p>不必纠结标签的绝对一致。有的同学可能在不同时期对同一内容的标签略有不同，担心对搜索造成影响。Logseq支持对标签进行重命名，只要进入标签页面修改标签题目即可联动修改所有标签。<br><img src="https://youpai.yeureka.cn/picgo/202504052221455.png"><br><img src="https://youpai.yeureka.cn/picgo/202504052221501.png"><br>可以看到所有用到 <code>[[属于1]]</code> 的地方都修改成了 <code>[[属于8]]</code>。</p><h3 id="多维标注体系构建"><a href="#多维标注体系构建" class="headerlink" title="多维标注体系构建"></a>多维标注体系构建</h3><p>推荐标注维度：</p><ul><li>研究属性：<code>[[理论框架]]</code>、<code>[[实证研究]]</code> 等</li><li>方法论：<code>[[定性分析]]</code>、<code>[[量化模型]]</code> 等</li><li>学科领域：<code>[[经济学]]</code>、<code>[[社会学]]</code> 等</li><li>重要程度：<code>[[核心文献]]</code>、<code>[[参考文献]]</code> 等</li></ul><h3 id="跨场景应用扩展"><a href="#跨场景应用扩展" class="headerlink" title="跨场景应用扩展"></a>跨场景应用扩展</h3><ul><li><strong>学术写作</strong>：通过组合查询快速定位支撑论据 </li><li><strong>教学备课</strong>：<code>&#123;&#123;query (and [[经典理论]] [[教学案例]])&#125;&#125;</code> </li><li><strong>考试复习</strong>：<code>&#123;&#123;query (and [[重点考点]] (not [[已掌握]]))&#125;&#125;</code> </li></ul><h2 id="最佳实践建议"><a href="#最佳实践建议" class="headerlink" title="最佳实践建议"></a>最佳实践建议</h2><ul><li>建立标签命名规范文档</li><li>配合 <code>Zotero Better Notes</code> 模板功能实现自动化标注</li></ul><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://docs.logseq.com/#/page/queries">Logseq Queries 用法官方文档</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Zotero </tag>
+            
+            <tag> Logseq </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>打造学术外挂大脑：Zotero+Logseq文献笔记模版进阶指南</title>
       <link href="2025/04/04/%E6%89%93%E9%80%A0%E5%AD%A6%E6%9C%AF%E5%A4%96%E6%8C%82%E5%A4%A7%E8%84%91%EF%BC%9AZotero+Logseq%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0%E6%A8%A1%E7%89%88%E8%BF%9B%E9%98%B6%E6%8C%87%E5%8D%97/"/>
       <url>2025/04/04/%E6%89%93%E9%80%A0%E5%AD%A6%E6%9C%AF%E5%A4%96%E6%8C%82%E5%A4%A7%E8%84%91%EF%BC%9AZotero+Logseq%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0%E6%A8%A1%E7%89%88%E8%BF%9B%E9%98%B6%E6%8C%87%E5%8D%97/</url>
