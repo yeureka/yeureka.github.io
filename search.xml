@@ -3442,16 +3442,5 @@
     </entry>
     
     
-    
-    <entry>
-      <title></title>
-      <link href="/mycss/cdntextcss.css"/>
-      <url>/mycss/cdntextcss.css</url>
-      
-        <content type="html"><![CDATA[<style>  .cdn-text {    display: inline-flex;    align-items: center;    gap: 1px;  }</style>]]></content>
-      
-    </entry>
-    
-    
   
 </search>
