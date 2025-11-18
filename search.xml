@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Unraid 部署 Seafile 个人网盘</title>
+      <link href="/2025/11/18/%E8%A7%A3%E9%94%81%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE%EF%BC%9A%E5%9C%A8%20Unraid%20%E4%B8%8A%E9%83%A8%E7%BD%B2%20Seafile%20%E5%B9%B6%E9%85%8D%E7%BD%AE%20Frp%20%E6%8C%87%E5%8D%97/"/>
+      <url>/2025/11/18/%E8%A7%A3%E9%94%81%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE%EF%BC%9A%E5%9C%A8%20Unraid%20%E4%B8%8A%E9%83%A8%E7%BD%B2%20Seafile%20%E5%B9%B6%E9%85%8D%E7%BD%AE%20Frp%20%E6%8C%87%E5%8D%97/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://youpai.yeureka.cn/picgo/20251118110537438.png"></p><p>参考<a href="https://cloud.seafile.com/wiki/publish/seafile-manual/9Uue/">官方文档</a>，用 Docker Compose 在 Unraid 中部署 Seafile 其实并不复杂，跟着文档一步步来，很快就能搞定。不过默认情况下 Seafile 只能在内网访问，如果你有一台带公网 IP 的服务器，就可以借助 Frp 实现外网访问。今天这篇文章，就来聊聊 Seafile 配置中几个关键部分的调整。</p><p><strong>第一步：yml 文件合并</strong></p><p>Seafile 官方文档中，不同功能模块会用到不同的 <code>yml</code> 文件，但 Unraid 的 Docker Compose 管理面板只认一个文件——那就是 <code>docker-compose.yml</code>。别担心，解决方法很简单：把官方文档中提到的几个 <code>yml</code> 文件内容，全部复制粘贴到默认打开的 <code>docker-compose.yml</code> 中，拼在一起就行，不影响部署效果。</p><p><strong>第二步：env 文件配置</strong></p><p>关键配置如下，照着改就行：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">COMPOSE_FILE=&#x27;docker-compose.yml&#x27;        # 改成 Unraid 默认的 compose 文件名</span><br><span class="line">BASIC_STORAGE_PATH=/mnt/user/appdata/seafilepro  # 数据存放路径，建议放在 appdata 目录下</span><br><span class="line">SEAFILE_SERVER_HOSTNAME=你的外网IP:外网端口        # 敲黑板！！！想要外网访问，这里必须填外网 IP 和端口</span><br><span class="line">TIME_ZONE=Asia/Shanghai                  # 时区设为上海</span><br><span class="line">JWT_PRIVATE_KEY=按照官网教程生成的KEY         # 跟着官方教程生成这个 KEY</span><br><span class="line">SEAFILE_MYSQL_DB_PASSWORD=设置一个MYSQL密码     # 必须设置</span><br><span class="line">INIT_SEAFILE_MYSQL_ROOT_PASSWORD=设置一个MYSQL密码 # 和上一个密码保持一致</span><br><span class="line">INIT_SEAFILE_ADMIN_EMAIL=Seafile用户名      # 用户名建议用邮箱</span><br><span class="line">INIT_SEAFILE_ADMIN_PASSWORD=Seafile密码     # 外网访问嘛，密码还是设复杂点好</span><br></pre></td></tr></table></figure><p><strong>第三步：yml 文件调整</strong></p><p>重点在 <code>services</code> 下的 <code>caddy</code> 部分：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">caddy:</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">宿主机端口:容器内部端口</span>  <span class="comment"># 敲黑板！！！默认是 80:80，但 Unraid 的 80 端口已经被占用，得改。这里其实涉及三个端口：容器内部端口、宿主机端口、外网端口。这儿设置的是，宿主机端口:容器内部端口，宿主机端口和外网端口的映射需要在 Frp 中设置。由于 Seafile 生成的各类网址都带端口，为了减少各种玄学 BUG，建议这三个端口设成同一个，而且要和 env 文件里填的一致。比如统一用 9980。</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">宿主机端口:容器内部端口</span>  <span class="comment"># 默认 443:443，同理被占用，可以改成 9443:9443。不过我们一般用 HTTP 访问，这个端口其实用不上。</span></span><br></pre></td></tr></table></figure><p>其他配置按照官方文档来就行，问题不大。</p><p><strong>小贴士</strong></p><p>部署过程中，大部分“死活访问不了”的问题，都跟 IP 和端口有关。不止是 Seafile 本体，配置其他服务时也要格外留意网址和端口的设置——很多时候需要统一写成外网的 IP 和端口，同时也要小心配置文件写错，导致端口重复出现两次，或者网址拼写不对。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Unraid </tag>
+            
+            <tag> Seafile </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>打造学术外挂大脑（三）：Query语法打造智能文献检索系统</title>
       <link href="/2025/04/05/%E6%89%93%E9%80%A0%E5%AD%A6%E6%9C%AF%E5%A4%96%E6%8C%82%E5%A4%A7%E8%84%91%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AQuery%E8%AF%AD%E6%B3%95%E6%89%93%E9%80%A0%E6%99%BA%E8%83%BD%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2%E7%B3%BB%E7%BB%9F/"/>
       <url>/2025/04/05/%E6%89%93%E9%80%A0%E5%AD%A6%E6%9C%AF%E5%A4%96%E6%8C%82%E5%A4%A7%E8%84%91%EF%BC%88%E4%B8%89%EF%BC%89%EF%BC%9AQuery%E8%AF%AD%E6%B3%95%E6%89%93%E9%80%A0%E6%99%BA%E8%83%BD%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2%E7%B3%BB%E7%BB%9F/</url>
