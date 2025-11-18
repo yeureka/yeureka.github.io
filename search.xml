@@ -368,9 +368,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> C语言 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -395,9 +395,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> C语言 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -672,9 +672,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> C语言 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -699,9 +699,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> C语言 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -726,9 +726,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> C语言 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -753,9 +753,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> C语言 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -805,9 +805,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> C语言 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -907,9 +907,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> C语言 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -959,9 +959,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> C语言 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -2986,9 +2986,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> C语言 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -3338,9 +3338,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> C语言 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -3390,9 +3390,9 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> C语言 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -3429,9 +3429,9 @@
     
     
     <entry>
-      <title>about</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -3440,9 +3440,9 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -3462,9 +3462,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>about</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
